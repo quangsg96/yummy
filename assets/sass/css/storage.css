@@ -1,0 +1,161 @@
+sass install :                                      npm install -g sass
+sass directory :                                        sass ./style.scss ./css/style.css --watch
+
+:hover #0070C0
+
+/* .fake-navi */
+.fake-navi {
+    // border: 2px solid #f00;
+    width: 100%;
+    height: 34px;
+    margin-top: -34px;
+    background-color: transparent;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    &-sub {
+        // background-color: orange;
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        margin-right: auto;
+        margin-left: auto;
+        > li {
+            cursor: pointer;
+            > a {
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+        }
+        > li:not(.fake-navi-visible) {
+            visibility: hidden;
+        }
+    }
+    &-reality {
+        &-wrap {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px;
+            display: none;
+            transition: all 0.5s ease-in-out;
+        }
+        &-dropdown {
+            width: 95%;
+            background-color: #fff;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: space-around;
+            > li {
+                margin-left: 2%;
+                padding: 25px 0;
+            }
+            a {
+                color: var(--bgc);
+            }
+            a:hover {
+                color: #404040;
+            }
+            &-sub {
+                li {
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+/* &-dropdown-1 */
+&-dropdown-1 {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+    transition: all 300ms cubic-bezier(0.2, 0.06, 0.05, 0.95);
+    box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* .fake-navi 2 */
+.fake-navi {
+    width: 100%;
+    height: 34px;
+    margin-top: -34px;
+    background-color: transparent;
+    position: relative;
+    z-index: 7;
+    &-sub {
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        transition: all 0.5s ease-in-out;
+        height: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        > li {
+            cursor: pointer;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        // > li:not(.fake-navi-visible) {
+            // visibility: hidden;
+        // }
+    }
+    &-reality {
+        &-wrap {
+            // display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px;
+            transition: all 0.5s ease-in-out;
+        }
+    }
+    &-visible {
+        position: relative;
+    }
+    &-dropdown {
+        &-1 {
+            // display: none;
+        }
+        &-2 {
+            // display: none;
+            width: 200px;
+            height: 160px;
+            padding: 20px 20px 15px 20px;
+            background-color: #fff;
+            box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.2);
+            li {
+                padding-bottom: 5px;
+                a {
+                    font-size: 13.5px;
+                    color: var(--bgc);
+                }
+                a:hover {
+                    color: #404040;
+                }
+            }
+        }
+    }
+}
+
+/* how to force slider's width into the same width */
+/* .slick-track {
+        display: flex;
+    }
+    
+    .slick-track .slick-slide {
+        display: flex;
+        height: auto;
+    }
+    
+    .slick-slide img {
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    } */
